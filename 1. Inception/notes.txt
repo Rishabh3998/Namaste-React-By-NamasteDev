@@ -53,3 +53,11 @@ There are multiple ways to add React in the codebase.
 2. ReactDOM.createRoot
 
 - DOM manipulation is the costliest operation inside the web browser. Adding some nodes inside the DOM and removing some nodes from the DOM are the costliest operations. To do these things efficiently React tells us do all this manipulations using JS. From now on do each manipulation using JS.
+
+Why do we call React a library?
+
+- Because it has the ability to work in a small portion of an existing other frameworks page.
+- We can stitch React anywhere in an existing code. Like suppose whole website is build on Angular, but for footer we want to
+use React, then we can do it easily, by making that portion as root and render the react elements inside that specific root.
+- We can use third party libraries to make React work efficiently, but in the case of frameworks each framework has its own 
+mechanisms to make that framework efficient.

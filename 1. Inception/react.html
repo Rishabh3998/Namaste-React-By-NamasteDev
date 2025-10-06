@@ -11,7 +11,18 @@ and it uses JavaScript to create and render a React element. -->
     <title>Namaste React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- This is the root element where we will render our React element. -->
+      <!-- Suppose we already have some content inside the root div. -->
+      <!-- <h1 id="heading">Hello World! from HTML</h1> -->
+      <!-- So, when we use ReactDOM to render a React element inside the root div, it
+      will replace the existing content inside the root div. ReactDOM will not
+      append the new content to the existing content. It will completely replace
+      the existing content with the new content. This is because ReactDOM is
+      designed to manage the entire content of the root element. Therefore, when
+      we render a React element inside the root div, it will replace the
+      existing content. -->
+    </div>
     <div id="root2"></div>
     <div id="root3"></div>
 
@@ -63,5 +74,41 @@ and it uses JavaScript to create and render a React element. -->
     <!-- Alternatively, we can write the above script in a separate file and include it in the HTML file. -->
     <!-- Here we have created a file named App.js and included it in the HTML file. -->
     <script src="./App.js"></script>
+
+    <!-- Let's discuss about the order of script tags. -->
+    <!-- 1. First we have included the React and ReactDOM CDN links, because we need to use React and ReactDOM in our App.js file. -->
+    <!-- 2. Then we have included the App.js file, because it contains the code to create and render the React element. -->
+    <!-- 3. If we include the App.js file before the React and ReactDOM CDN links, then we will get an error because React and ReactDOM will not be defined. -->
+    <!-- 4. So, always include the React and ReactDOM CDN links before the App.js file.     -->
+
+    <!-- Do we have any attributes for script tag which can help us to avoid such errors? -->
+    <!-- Yes, we have two attributes for script tag which can help us to avoid such errors. -->
+    <!-- 1. defer -->
+    <!-- 2. async     -->
+    <!-- - defer: It tells the browser to download the script file during HTML parsing and execute the script file after the HTML parsing is done. -->
+    <!-- - async: It tells the browser to download the script file during HTML parsing and execute the script file as soon as it is downloaded. -->
+    <!-- - We can use either defer or async attribute in the script tag. -->
+    <!-- - But we should not use both defer and async attributes together in the same script tag. -->
+    <!-- - If we use both defer and async attributes together in the same script tag, then the browser will ignore the async attribute and will execute the script file after the HTML parsing is done. -->
+    <!-- - So, it is better to use defer attribute in the script tag. -->
+    <!-- - We can use defer attribute in all the script tags, because it will not affect the execution order of the script files. -->
+    <!-- - But if we use async attribute in all the script tags, then the execution order of the script files will be unpredictable. -->
+    <!-- - So, it is better to use defer attribute in all the script tags. -->
+    <!-- - But in the case of React and ReactDOM CDN links, we should not use defer attribute, because we need to use React and ReactDOM in our App.js file. -->
+    <!-- - So, we should not use defer attribute in the React and ReactDOM CDN links script tags. -->
+    <!-- - We can use defer attribute in the App.js script tag, because it will not affect the execution order of the script files. -->
+    <!-- - So, the final order of script tags will be like this: -->
+    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js"></script> -->
+    <!-- <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+    <!-- <script defer src="./App.js"></script> -->
+
+    <!-- what is the difference between react.development.js and react.production.js? -->
+    <!-- react.development.js is the development version of React library which is used during the development of the application. -->
+    <!-- It contains useful warnings and error messages which help us to debug the application. -->
+    <!-- It is not optimized for performance and it is not minified. -->
+    <!-- react.production.js is the production version of React library which is used during the deployment of the application. -->
+    <!-- It is optimized for performance and it is minified. -->
+    <!-- It does not contain useful warnings and error messages which help us to debug the application. -->
+    <!-- So, we should use react.development.js during the development of the application and react.production.js during the deployment of the application. -->
   </body>
 </html>
