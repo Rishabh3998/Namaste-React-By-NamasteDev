@@ -1,0 +1,102 @@
+In the previous episode the code that you wrote do you think you can push to productions?
+- No, because that code is not optimized, it contains lot of console.log statements, random comments, which are not
+required for a production level code, to push this in the production, the code should be minified first, contains less
+space or memory in bundle size, bundle up the code, optimize the media present in the code, like instead of jpeg, png, 
+use .webp which is really optimized.
+
+Points to remember:
+- Do bundling
+- Do Code splitting
+- Do Chunking
+- Do image optimization
+- Minify the code (Minify the CSS, remove the unnecessary comments, remove stale code)
+
+React alone is not responsible in making our app production ready, there are hundreds of packages working bts, to make
+an app production ready.
+
+Let's introduce NPM:
+
+NPM does not have a full form, node package manager is just the full form that people gave, on official website of NPM
+we don't have any full-form for npm. NPM manages packages but it does not stand for node package manager. It manages the
+packages behind the scenes but don't have any full-form.
+
+Let's add NPM to our project.
+
+step 1: npm init 
+step 2: fill the form-fields one by one
+
+Now after everything, a package.json file will be created.
+
+Our project is dependent upon a lot of packages. Those packages on which the project is dependent upon are the dependencies.
+And NPM manages that, now to take care of all the packages, NPM will keep a track and will save that in package.json. So, that
+if in future, user want to re-install all the dependencies, then he can directly write npm install, and NPM will install all 
+the dependencies according to the config present in the package.json. Ultimately the package.json is the config for the NPM.
+
+**Most important package in our project**
+
+It is a bundler. Eg: Webpack, parcel, vite etc
+Bundler helps to package our app, so that it can be ship to production.
+
+Let's install parcel package/dependency.
+
+- npm i -D parcel
+- What is -D?
+- When user want to install a dependency as a dev dependency, in that case we use -D flag while installing.
+
+- There are 2 types of dependencies:
+1. Dev dependency (Only required in the development phase)
+2. Dependency (Normal) (Used in development and in production both environments)
+
+we will only use parcel to bundle our app while developing, there the -D flag is added.
+
+"devDependencies": {
+    "parcel": "^2.16.0"
+}
+
+What is the meaning of ^ before 2.16.0 in the above object?
+- ^ (caret icon)
+- Suppose if tomorrow, a new minor/patch version of parcel is released, in that case if we use ^ then npm will automatically upgrade the package. But this is only applicable for minor/patch versions. Eg: 2.8.3 => 2.8.4
+
+- ~ (tilde icon) 
+- This works for major releases, without installing the minor/patches of package. Eg: 2.8.3 => 3.0.0
+
+What is package-lock.json?
+
+What is the difference between package.json and package-lock.json?
+
+- package.json (Keeps approx version)
+- config of npm, which keeps the track of all the packages and their version user is installing or installed.
+
+- package-lock.json (Keeps exact version)
+- It keeps the track of exact version we installed. It will not contain any ^ or ~ it will have the exact install version details.
+- Integrity key has the hash of the version installed.
+
+1. Ensures Package Integrity (Security)
+
+- When you or someone else installs dependencies (npm install), npm verifies that the downloaded package’s content matches the exact hash in the integrity field.
+
+- This ensures that the package:
+
+- hasn’t been tampered with,
+- isn’t corrupted,
+- and is identical to what was originally installed.
+
+If the hash doesn’t match, npm will throw an error and refuse to install that package.
+
+2. Speeds Up Installation (Cache Validation)
+
+- npm uses the integrity hash to quickly check its local cache and skip re-downloading packages that match perfectly.
+- This makes repeated installs faster and more reliable.
+
+What is node_modules folder?
+- It contains all the code that we fetch from npm for our dependencies that we installed.
+- Now parcel has some dependencies, and those dependencies has some dependencies, due to which we have this much code in
+node_modules folder, this nested dependencies structure, is known as transitive dependency.
+- Each dependency in node_modules will have its own package.json, using which each one is accessing the code of dependencies.
+
+What should be pushed to github or not?
+- Push package.json and package-lock.json
+- Don't push node_modules
+
+we can re-generate the node_modules via npm install we just need package.json and package-lock.json
+

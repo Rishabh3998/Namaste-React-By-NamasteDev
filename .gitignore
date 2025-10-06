@@ -15,3 +15,9 @@ Icon
 
 # macOS metadata files
 .DS_Store?
+
+# avoid Pdf files
+*.pdf
+
+# avoid node modules
+node_modules/   

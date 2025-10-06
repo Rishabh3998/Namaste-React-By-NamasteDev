@@ -1,0 +1,22 @@
+{
+  "name": "2.-igniting-our-app",
+  "version": "1.0.0",
+  "description": "Namaste React",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabh3998/Namaste-React-By-NamasteDev.git"
+  },
+  "author": "Rishabh kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabh3998/Namaste-React-By-NamasteDev/issues"
+  },
+  "homepage": "https://github.com/Rishabh3998/Namaste-React-By-NamasteDev#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
