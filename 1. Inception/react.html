@@ -13,14 +13,27 @@ and it uses JavaScript to create and render a React element. -->
     <div id="root"></div>
 
     <!-- Due to these CDN links, we can use React and ReactDOM in our HTML file. -->
+
+    <!-- The below script is the core file of React library which is responsible for creating and managing React elements. -->
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
     ></script>
+
+    <!-- The below script is the core file of ReactDOM library which is responsible for interacting with the DOM. -->
     <script
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
+
+    <!-- Why we have separate React and ReactDOM libraries? -->
+    <!-- React is a library for building user interfaces, while ReactDOM is a library that provides DOM-specific methods that can 
+    be used at the top level of a web app to enable an efficient way of managing DOM elements of the web page.
+    Therefore we have separate React and ReactDOM libraries.
+    We can use React in other environments as well like mobile apps (React Native), VR (React VR) etc. 
+    For mobiles and VR we don't need ReactDOM as they don't have a DOM.
+    In mobile we use React Native and in VR we use React VR.
+    -->
 
     <!-- Now we can use React and ReactDOM in our HTML file. -->
     <!-- Next step is to print Hello World! using React. -->

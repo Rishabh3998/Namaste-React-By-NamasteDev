@@ -12,6 +12,7 @@ Remember that Browser only understand Html, CSS, and JS. It does not understand 
 To run the React code, we have transpilers which convert the React code to Html, Css and Js and 
 provide it to the browser to execute and render the webpage.
 
+- How can we add React super powers in our project?
 Ways to add React into our project:
 
 1. Via CDN (Content Delivery Network) (See react.html file)
@@ -42,8 +43,7 @@ Ways to add React into our project:
 
 2. Via Libraries like, Create-react-app, vite etc
 
-- How can we add React super powers in our project?
-
+**PS**
 There are multiple ways to add React in the codebase.
 1. We can add React and ReactDOM CDN (Content delivery network) links in the end of the body tag
    of the main root file, now the React and ReactDOM powers will attach to our project.
