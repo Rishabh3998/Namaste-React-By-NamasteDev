@@ -1,12 +1,10 @@
-In index.html file, we just tried to create a Hello world Program using 
-Html where we created a root container and create aan h1 element with some content, 
+In index.html file, we just tried to create a Hello world Program using Html where we created a root container and create aan h1 element with some content, 
 and then using JS where we created an element, then added the content, then appended that 
 in the root container.
 
 In react.html we created the same Hello world program but by using React specific code.
 
-createElement, innerHtml, document.[placeholder], these are DOM API's, provided by the 
-browser itself inside which JS Engine is there which executed all this JS code.
+createElement, innerHtml, document.[placeholder], these are DOM API's, provided by the browser itself inside which JS Engine is there which executed all this JS code.
 
 Remember that Browser only understand Html, CSS, and JS. It does not understand the React code.
 To run the React code, we have transpilers which convert the React code to Html, Css and Js and 
@@ -49,4 +47,9 @@ There are multiple ways to add React in the codebase.
    of the main root file, now the React and ReactDOM powers will attach to our project.
 2. We can create a React project via create-react-app, vite, etc.
 
-- DOM manipulation is the costliest operation inside the web browser.
+**React APIs we used till now**
+
+1. React.createElement
+2. ReactDOM.createRoot
+
+- DOM manipulation is the costliest operation inside the web browser. Adding some nodes inside the DOM and removing some nodes from the DOM are the costliest operations. To do these things efficiently React tells us do all this manipulations using JS. From now on do each manipulation using JS.

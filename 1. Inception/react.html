@@ -7,7 +7,8 @@ and it uses JavaScript to create and render a React element. -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Namaste React</title>
   </head>
   <body>
     <div id="root"></div>
@@ -40,17 +41,25 @@ and it uses JavaScript to create and render a React element. -->
     <script>
       // Create a React element
       // Syntax: React.createElement(type-of-tag, props-to-pass, children-to-pass-inside-the-created-tag)
-      const heading = React.createElement("h1", {}, "Hello World! from React");
+      // const heading = React.createElement("h1", {}, "Hello World! from React");
 
       // Create a root element (to interact with the DOM we use ReactDOM)
+      // React does not know about the root element in the HTML file, so we need to tell ReactDOM about it.
+      // and pass the root element to ReactDOM.createRoot() method.
+
+      // Earlier we used React.createElement() to create a React element.
+      // Now we will use ReactDOM.createRoot() to create a root element. Because ReactDOM is responsible for
+      // interacting with the DOM, and we will add out elements to the DOM.
       // Syntax: ReactDOM.createRoot(document.getElementById("root") element)
-      const root = ReactDOM.createRoot(document.getElementById("root"));
+      // const root = ReactDOM.createRoot(document.getElementById("root"));
 
       // Render the React element to the root element
       // Syntax: root.render(React element)
-      root.render(heading);
+      // root.render(heading);
     </script>
 
+    <!-- Alternatively, we can write the above script in a separate file and include it in the HTML file. -->
+    <!-- Here we have created a file named App.js and included it in the HTML file. -->
     <script src="./App.js"></script>
   </body>
 </html>
