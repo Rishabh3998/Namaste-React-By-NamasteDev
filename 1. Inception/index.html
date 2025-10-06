@@ -1,0 +1,26 @@
+<!-- This is a simple HTML file that creates an h1 element via JS
+and appends it to the div with Id = root using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- <h1>Hello World!</h1> -->
+    </div>
+    <script>
+      // Create h1 tag using JS
+      const heading = document.createElement("h1");
+      // Add content to the h1 tag
+      heading.innerHTML = "Hello World! from JS";
+      // Find the root div element
+      const root = document.getElementById("root");
+      // Append the h1 tag to the root div
+      root.appendChild(heading);
+    </script>
+  </body>
+</html>

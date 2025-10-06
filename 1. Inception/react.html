@@ -1,0 +1,43 @@
+<!-- This is a simple HTML file that demonstrates how to use React and ReactDOM to create a 
+basic "Hello World!" application. The code includes the necessary CDN links for React and ReactDOM, 
+and it uses JavaScript to create and render a React element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Due to these CDN links, we can use React and ReactDOM in our HTML file. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- Now we can use React and ReactDOM in our HTML file. -->
+    <!-- Next step is to print Hello World! using React. -->
+    <script>
+      // Create a React element
+      // Syntax: React.createElement(type-of-tag, props-to-pass, children-to-pass-inside-the-created-tag)
+      const heading = React.createElement("h1", {}, "Hello World! from React");
+
+      // Create a root element (to interact with the DOM we use ReactDOM)
+      // Syntax: ReactDOM.createRoot(document.getElementById("root") element)
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      // Render the React element to the root element
+      // Syntax: root.render(React element)
+      root.render(heading);
+    </script>
+
+    <script src="./App.js"></script>
+  </body>
+</html>

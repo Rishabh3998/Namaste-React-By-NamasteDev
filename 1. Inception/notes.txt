@@ -1,0 +1,52 @@
+In index.html file, we just tried to create a Hello world Program using 
+Html where we created a root container and create aan h1 element with some content, 
+and then using JS where we created an element, then added the content, then appended that 
+in the root container.
+
+In react.html we created the same Hello world program but by using React specific code.
+
+createElement, innerHtml, document.[placeholder], these are DOM API's, provided by the 
+browser itself inside which JS Engine is there which executed all this JS code.
+
+Remember that Browser only understand Html, CSS, and JS. It does not understand the React code.
+To run the React code, we have transpilers which convert the React code to Html, Css and Js and 
+provide it to the browser to execute and render the webpage.
+
+Ways to add React into our project:
+
+1. Via CDN (Content Delivery Network) (See react.html file)
+   - What is CDN?
+   - A Content Delivery Network (CDN) is a globally distributed network of servers that stores copies of web content (like images, videos, and scripts) to deliver it to users from a server geographically closer to them, resulting in faster website loading times and improved performance. By reducing the physical distance data travels and distributing the load across multiple servers, CDNs decrease latency, prevent website crashes from traffic spikes, and lower bandwidth costs for website owners.
+
+   - What is CrossOrigin in script tag?
+   - The crossorigin attribute in an HTML <script> tag is used to control how the browser handles Cross-Origin Resource Sharing (CORS) requests for the script. CORS is a mechanism that allows web pages to request resources from a different domain than the one that served the original page.
+
+   Here's a breakdown of its purpose and values:
+
+   **Purpose**:
+
+   Security: It helps protect users from potential security threats like data leakage or malicious script injection when fetching resources from different origins.
+   CORS Configuration: It explicitly tells the browser how to make the cross-origin request, specifically regarding the inclusion of credentials (like cookies or HTTP authentication).
+   Error Handling: It can provide more informative error messages in the console when CORS-related issues occur.
+
+   **Values**:
+
+   anonymous (or omitted/empty string):
+   This is the default behavior if the attribute is present but no value or an invalid value is specified.
+   The browser will make the cross-origin request without sending user credentials (cookies, HTTP authentication, client-side TLS certificates).
+   The server then decides whether to serve the resource without this identifying information. This is generally the more secure option for public scripts that don't require authentication.
+   
+   use-credentials:
+   The browser will make the cross-origin request and include user credentials (cookies, HTTP authentication, client-side TLS certificates).
+   This is used when the external script requires authentication or session information to be accessed. The server must then explicitly allow these credentials through its CORS headers (e.g., Access-Control-Allow-Credentials: true).
+
+2. Via Libraries like, Create-react-app, vite etc
+
+- How can we add React super powers in our project?
+
+There are multiple ways to add React in the codebase.
+1. We can add React and ReactDOM CDN (Content delivery network) links in the end of the body tag
+   of the main root file, now the React and ReactDOM powers will attach to our project.
+2. We can create a React project via create-react-app, vite, etc.
+
+- DOM manipulation is the costliest operation inside the web browser.
