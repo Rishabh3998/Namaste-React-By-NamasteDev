@@ -21,3 +21,9 @@ Icon
 
 # avoid node modules
 node_modules/   
+
+# avoid dist folder
+dist/   
+
+# avoid .parcel-cache folder
+.parcel-cache/   

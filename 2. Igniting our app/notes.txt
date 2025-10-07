@@ -116,3 +116,10 @@ There we should install React via npm and add its versions etc inside package.js
 npm install react (Here we are not using -D because we want react on production env as well)
 
 To use import and export inside the js file, that js file should be type="module"
+
+"main": "app.js", This line present in package.json is redundant and create conflicts with parcel, because with parcel
+we need to give the entry point explicitly in the command.
+
+npx parcel index.html   // Create dev build
+npx parcel build index.html  // Production build command and the build will be placed in dist folder
+npx parcel app.js
