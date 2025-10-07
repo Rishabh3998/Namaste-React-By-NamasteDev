@@ -100,3 +100,19 @@ What should be pushed to github or not?
 
 we can re-generate the node_modules via npm install we just need package.json and package-lock.json
 
+What is the difference between npm and npx?
+- **npm** (Node Package Manager) is used to install, manage, and run packages (dependencies) from the npm registry. For example, `npm install <package>` installs a package, and `npm run <script>` runs a script defined in your `package.json`.
+
+- **npx** (Node Package Execute) is used to execute binaries from npm packages, either installed locally in your project or fetched temporarily without installing them globally. For example, `npx create-react-app my-app` runs the `create-react-app` package without needing to install it globally.
+
+**Key Differences:**
+- `npm` installs and manages packages, while `npx` is used to execute packages.
+- With `npx`, you can run a package without permanently installing it.
+- `npx` is especially useful for running one-off commands or tools (like `create-react-app`, `parcel`, etc.) without polluting your global or local dependencies.
+
+Note: Adding React powers into our app using CDN is not a good way, because it will create an unnecessary api call to fetch the core React.
+There we should install React via npm and add its versions etc inside package.json file.
+
+npm install react (Here we are not using -D because we want react on production env as well)
+
+To use import and export inside the js file, that js file should be type="module"

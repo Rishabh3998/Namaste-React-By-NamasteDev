@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Rishabh3998/Namaste-React-By-NamasteDev#readme",
   "devDependencies": {
     "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }

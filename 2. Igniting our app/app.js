@@ -1,3 +1,9 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// To use React and ReactDOM in our app, we need to import them from "react" and "react-dom" packages.
+// To invoke these imports, we need to make this file type as "module" in package.json file or inside the script tag we need to add type="module".
+
 // Create a React element
 // Syntax: React.createElement(type-of-tag, props-to-pass, children-to-pass-inside-the-created-tag)
 const heading = React.createElement(
