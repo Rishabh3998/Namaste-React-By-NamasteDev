@@ -123,3 +123,24 @@ we need to give the entry point explicitly in the command.
 npx parcel index.html   // Create dev build
 npx parcel build index.html  // Production build command and the build will be placed in dist folder
 npx parcel app.js
+
+To populate browsers-list inside the package.json
+
+Eg: 
+"browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 10 Safari versions",
+    "last 10 Edge versions",
+    "last 10 Opera versions",
+    "last 10 iOS versions",
+    "last 10 Android versions",
+    "last 10 Opera Mini versions",
+    "not dead"
+]
+
+See: https://browserslist.dev/
+
+
+
+
