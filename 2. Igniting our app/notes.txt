@@ -141,6 +141,10 @@ Eg:
 
 See: https://browserslist.dev/
 
+When a React Element (JS object contains config of an upcoming element) renders inside a DOM, then it becomes an HTMLElement.
+
+React.createElement => Object => HTMLElement(render)
+
 
 
 
