@@ -15,3 +15,80 @@ Eg:
 - Footer
 - Footer contents: Quick links, Careers ...
 
+There are 3 ways to write css inside the React code:
+1. Inline
+2. By creating separate Css files
+3. Via libraries: TailwindCSS ...
+
+We have covered basic things in this module like:
+
+How stylings works?
+How planning creates an impact?
+How we create our components dynamic via props?
+
+Currently most of the big tech firms wants to make their UI configurable for which they try to control the UI via server.
+
+The goal is to create a website whose structure, layout, and behavior can be controlled dynamically from the server. The server sends 
+a configuration (config) that defines how the UI should look and function.
+
+This approach helps us build a config-driven UI, where the front end doesn’t need frequent code changes or re-deployments. 
+Instead, updates can be made simply by modifying the server-side configuration.
+
+Key Ideas:
+- The server provides a JSON config containing details like component types, layout order, data sources, styles, and conditional logic.
+- The client (frontend) interprets this config and renders the UI accordingly.
+- This architecture allows:
+    - Faster iterations and updates (no redeploy needed).
+    - A single UI codebase serving multiple use cases or customers.
+
+Easier feature flagging and A/B testing.
+
+Dynamic personalization based on user roles, regions, or permissions.
+
+Example:
+A dashboard app can receive a config like:
+
+{
+  "layout": ["header", "chart", "table"],
+  "components": {
+    "chart": { "type": "bar", "dataSource": "/api/sales" },
+    "table": { "columns": ["Name", "Revenue"], "dataSource": "/api/sales" }
+  }
+}
+
+The frontend reads this and dynamically builds the UI — without needing code changes for new layouts or components.
+
+Case study:
+
+Suppose you want to show some ads according to the sellers in an e-commerce website, then you can just add the ads 
+inside the component in your codebase, the best way to control this is via server, where we will create specific configs for the 
+specific sellers and the ads which they want to show.
+
+Eg: Check swiggy website, go to network tab and see their api's where they are sending the config from server to UI.
+
+Question: Why do we prefer to pass key inside the components which we are rendering using map?
+- Key helps us to empower the diffing algorithm which is responsible for DOM updates. 
+- Key makes the DOM updates faster when we have key present for the components.
+- If key is not present then whole list of components will re-render, but if the key is present only required component will render.
+  and no unnecessary re-rendering will happen.
+- Key helps react to keep track of the component age, which is new or which is old.
+
+This is a huge optimization which helps react to do fast re-renders.
+
+Always try to use a unique id as the key in the component.
+Most of the people also uses indexes as key, but this is not a good practice. React itself says in docx to never use index as key.
+
+What problems can we see if we use index as keys?
+
+**Case study Eg:**
+CAUTION: I recently ran into a massive ui problem when I used the index argument of
+the map function as the key to a mapped react component.
+The state was a list of objects.
+The container component sorted the list of objects in the state and mapped it to an
+smaller ui components.
+It worked completely as expected until I added a new item to the state and sorted /
+mapped it again.
+At that point react got confused about which properties belonged to which mapped
+component, and it had me questioning everything I knew about react.
+Once I switched to using a uuid as a key for the mapped component, everything
+started working well again.
