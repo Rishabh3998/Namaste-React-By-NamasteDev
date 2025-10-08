@@ -131,3 +131,5 @@ These 3 ways to render JSX are same-thing:
 <Title />
 <Title></Title>
 {Title()}
+
+Note: JSX is the reason why our React code is readable and concise.
