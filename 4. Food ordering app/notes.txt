@@ -1,0 +1,17 @@
+In this module we will build a food ordering web-app like swiggy and zomato.
+
+Note: Before starting implementation always do the planning first. How you will create this website?
+What are the requirements? Mock-up designs? ....
+
+Determine what components do you need to build you website.
+
+Eg:
+- Header
+- Header contents: Logo, Home, About, Cart, sign in/Login, search bar ....
+- Subheader
+- Subheader contents: filters ...
+- Body
+- Body contents: Restaurants cards inside a Restaurant container ...
+- Footer
+- Footer contents: Quick links, Careers ...
+
