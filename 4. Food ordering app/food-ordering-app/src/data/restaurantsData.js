@@ -83,6 +83,18 @@ const data = [
     image:
       "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png",
   },
+  {
+    id: 8,
+    name: "Lapino's Pizza",
+    rating: 4.5,
+    description:
+      "A pizza is a food consisting of a cooked dough of flour and water, topped with a tomato sauce and cheese.",
+    cuisines: ["Italian", "Pizza", "Pasta"],
+    costForTwo: 100,
+    deliveryTime: 50,
+    image:
+      "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png",
+  },
 ];
 
 export default data;
